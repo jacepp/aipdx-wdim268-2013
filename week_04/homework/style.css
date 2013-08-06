@@ -1,0 +1,99 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400|Bitter:400,700);
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #34495E;
+  color: #ECF0F1;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 1em;
+}
+
+h1,
+h2 {
+  font-family: "Bitter", serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  margin: 100px 0;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 960px;
+  margin: 100px auto 50px;
+  padding: 0 10px 40px;
+  background-color: #2C3E50;
+  border: 2px dashed #16A085;
+}
+
+.inline-nav {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+}
+
+.inline-nav > li {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.inline-nav > .divider {
+  border-bottom: none;
+    border-top: none;
+    border-right: solid 1px #1ABC9C;
+    border-left: solid 1px #16A085;
+    clear: none;
+    height: 23px;
+    width: 0px;
+}
+
+.inline-nav > li > a {
+  color: #2ECC71;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.inline-nav > li > a:hover {
+  color: #E74C3C;
+  border-bottom: 1px solid #E74C3C;
+}
+
+.floater {
+  width: 33%;
+  float: left;
+  margin: 30px .33% 60px 0;
+}
+
+.floater > p {
+  padding: 25px;
+  background-color: #2980B9;
+  border: 1px solid #3498DB;
+}
+
+.overflow {
+  max-height: 300px;
+  padding: 5px 25px;
+  color: #2C3E50;
+  background-color: #98A3A3;
+  overflow: auto;
+}
+
+.sticky {
+  position: absolute;
+  top: -6%;
+  right: 4%;
+  width: 200px;
+  height: 300px;
+  padding: 0 25px;
+  background-color: #C0392B;
+}
