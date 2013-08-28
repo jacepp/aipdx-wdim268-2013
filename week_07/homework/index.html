@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Week 7 HW</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>That&apos;s right, another todo list</h1>
+    <ul contenteditable>
+      <li>Click here and type (<em>hit enter to get next line</em>)</li>
+    </ul>
+    <div class="btns">
+      <button id="clear" class="btn btn-2 btn-2i">Clear</button>
+      <button id="save" class="btn btn-2 btn-2j">Save</button>
+    </div>
+  </div>
+
+  <script>
+    $(function() {
+      var $ul = $('ul');
+
+      $('#save').click( function(e) {
+        e.preventDefault;
+        localStorage.setItem('list', $ul.html());
+      });
+
+      $('#clear').click( function(e) {
+        e.preventDefault;
+        localStorage.clear('list');
+        location.reload();
+      });
+
+      if(localStorage.getItem('list')) {
+        $ul.html(localStorage.getItem('list'));
+      }
+    });
+  </script>
+</body>
+</html>
